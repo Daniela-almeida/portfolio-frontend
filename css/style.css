@@ -1138,7 +1138,7 @@ body {
     height: 139vh;
   }
   .card-services .card {
-    width: 72vw;
+    width: 80vw;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1158,10 +1158,10 @@ body {
   }
   .card-services .card-title {
     font-size: 1.1em;
-    margin-top: 1em;
+    margin-top: 0.1em;
   }
   .card-services .text-service-card {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .container05 {
     height: 116vh;
@@ -1184,7 +1184,7 @@ body {
     font-size: 1.3em;
   }
   .card-2 .text-project {
-    font-size: 18px;
+    font-size: 0.9em;
   }
   .email {
     margin-left: 13em;
@@ -1203,7 +1203,7 @@ body {
     margin-top: 7em;
   }
   .container01 {
-    height: 47vh;
+    height: 51vh;
   }
   .social-media .direitos {
     font-size: 17px;
@@ -1260,7 +1260,7 @@ body {
 }
 .container02 img {
   position: absolute;
-  top: 116%;
+  top: 136%;
   left: 7%;
   width: 83%;
 }
