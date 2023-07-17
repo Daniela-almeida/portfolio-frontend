@@ -1,9 +1,6 @@
 # PortfolioDev
 
 
-Autora
-@Daniela-almeida
-
 🛠 Habilidades
 Javascript, HTML, CSS...
 
