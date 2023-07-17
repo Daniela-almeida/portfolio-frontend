@@ -1,19 +1,40 @@
+/* geral */
 * {
   font-family: "Montserrat", sans-serif;
 }
-
+/* scroll */
 html {
   scroll-behavior: smooth;
 }
-
-a{
+/* links */
+a {
   text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
 }
 
 body {
   overflow-x: hidden;
 }
 
+/* texto destacado */
+mark {
+  color: #fff;
+  background: none;
+}
+
+/* header - logo e nav */
+.container-header {
+  position: fixed;
+  z-index: 3;
+  max-width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out, background-color 0.3s;
+  background-color: #11001c;
+}
+/* logo */
 .logo-header {
   color: #fff;
   font-size: 2em;
@@ -21,13 +42,15 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-.logo-header img{
+.logo-header img {
   width: 2vw;
 }
+
+/* barra de nav */
 .nav-item,
 .nav-link {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5rem;
   gap: 10px;
   margin-left: 1em;
   font-family: "Montserrat", sans-serif;
@@ -43,8 +66,9 @@ body {
   transition-duration: 0.5s;
 }
 
+/* barra de nav - animation */
 
-.nav-item .nav-link:before{
+.nav-item .nav-link:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -52,7 +76,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: solid 1px #7a20b6;
+  border-bottom: solid 2px #b429f9;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -65,45 +89,45 @@ body {
   transition-timing-function: ease-out;
 }
 .nav-item:hover,
-.nav-link:hover, 
+.nav-link:hover,
 .nav-item:focus,
-.nav-link:focus, 
+.nav-link:focus,
 .nav-item:active,
 .nav-link:active {
   color: #fff;
 }
 
-
-.nav-item .nav-link:hover:before, .nav-item .nav-link:focus:before, .nav-item .nav-link:active:before {
+.nav-item .nav-link:hover:before,
+.nav-item .nav-link:focus:before,
+.nav-item .nav-link:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
+/* mobile btn */
 .btn-mobile {
   background-color: #aa21d7;
   border: #080609 solid 1px;
 }
 
-.container-header {
-  background-color: #000;
-  position: fixed;
-  z-index: 3;
-  max-width: 100%;
-  overflow: hidden;
-}
-
+/* 1° container - job name */
 .container01 {
-  background: linear-gradient(45deg, #000, #000, #000, #8227c7);
+  background: #11001c;
   overflow: hidden;
   height: 95vh;
 }
 
+/* seção do container com texto */
 .section-container {
-  margin-top: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
 }
 
+/* titles */
 .section-container,
 .title-job {
   font-size: 1.9em;
@@ -115,73 +139,55 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  text-align: center;
 }
+
+/*  2° container - about */
 .container02 {
   max-width: 100%;
   overflow: hidden;
-  height: 100vh;
+  height: 95vh;
   background-position: 90% 40%;
   background-repeat: no-repeat;
-  background-color: #000;
+  background-color: #190028;
+  padding-top: 10em;
 }
 
-.container02 img{
+/* imagem 2° container */
+.container02 img {
   position: absolute;
-  top: 95%;
-  left: 58%;
-  width: 42%;
-}
-.contact-me .social1{
-  width: 2.2vw;
-  position: absolute;
-  top: 95em;
-  left: 20em;
+  top: 100%;
+  left: 60%;
+  width: 35%;
 }
 
-
-.contact-me .social2{
-  width: 2.2vw;
-  position: absolute;
-  top: 95em;
-  left: 25em;
+/* div dos textos */
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-top: 7em;
 }
-
-.contact-me .social3{
-  width: 2.2vw;
-  position: absolute;
-  top: 95em;
-  left: 30em;
-}
-
-.contact-me .social4{
-  width: 2.2vw;
-  position: absolute;
-  top: 95em;
-  left: 35em;
-}
-
-.contact-me .social5{
-  width: 2.2vw;
-  position: absolute;
-  top: 95em;
-  left: 40em;
-}
+/* titulo */
 .title-sobre {
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-weight: bold;
   padding-top: 3em;
-  color: #993ae1;
+  color: #fff;
   letter-spacing: 1px;
 }
-
+/* sub-title */
 .text-about {
-  color: #c233f1;
-  font-size: 2.1em;
+  color: #d5c4f6;
+  font-size: 2em;
   letter-spacing: 1px;
-  margin-left: 4em;
-  margin-top: 4em;
+  display: flex;
+  justify-content: start;
+  margin-left: 4.4em;
 }
 
+/* sub-texto */
 .subtext-about {
   font-size: 1.5em;
   font-weight: 400;
@@ -192,124 +198,263 @@ body {
   margin-top: 1em;
 }
 
+/* social media */
+.social-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 10px;
+  border-radius: 5em;
+  margin-left: 8em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+.github {
+  background-color: #333;
+}
+
+.github:hover {
+  box-shadow: #300c4b 9px 3px 7px;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin:hover {
+  box-shadow: #300c4b 9px 3px 7px;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+.instagram:hover {
+  box-shadow: #300c4b 9px 3px 7px;
+}
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+/* 3°container - skill */
 .container03 {
   width: 100%;
-  height: 104vh;
-  background-color: #000;
+  height: 100vh;
+  background-color: #11001c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title-skills {
-  font-size: 2.8em;
-  padding-top: 3em;
-  color: #993ae1;
+/* card skill */
+.card1 {
+  width: 50vw;
+  background-color: #220135;
+  box-shadow: 10px -1px 67px 3px rgba(125, 34, 125, 0.76);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* header skill card */
+.header {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+}
 
+/* body card */
+.card-body1 {
+  padding: 20px;
+}
+
+/* div das skills */
+.skills {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* name skill and level */
+.skill-name {
+  width: 10vw;
+  font-size: 16px;
+  color: #fff;
+}
+.skill-name:hover {
+  color: #f9626c;
+}
+.skill-level {
+  width: 15vw;
+  height: 0.8em;
+  background-color: #eeeeeeb9;
+  border-radius: 1px;
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+
+.skill-percent {
+  background-color: #f9626c;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* 4°container - serviços */
 .container04 {
   max-width: 100%;
   overflow: hidden;
-  min-height: 104vh;
-  background-color: #000;
-  border-left: solid 5px #000;
+  min-height: 95vh;
+  background-color: #190028;
 }
 
-.text-services {
-  font-size: 2.8em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding-top: 3em;
-  color: #993ae1;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* card-serviços */
 .card-services {
   display: flex;
   justify-content: space-around;
   gap: 3em;
-  padding-top: 12em;
-  margin-top: 1em;
+  padding-top: 18em;
+  margin-top: 1.3em;
 }
 
- .card {
-  background-color: #161616;
-  box-shadow: 10px 12px 20px rgba(0, 0, 0, 0.527);
-  min-width: 40%;
+/* card com cada serviço */
+.card2 {
+  background-color: #11001c;
+  box-shadow: 10px -1px 67px 3px rgba(64, 11, 64, 0.681);
+  min-width: 20vw;
   height: 26vh;
   color: #fff;
   transition: all 0.6s ease-in-out;
   border: solid 1px transparent;
- 
+  border-radius: 8px;
+  padding: 1em;
 }
-.card-services .card:hover {
+
+/* hover card */
+.card-services .card2:hover {
   color: #fff;
   cursor: cell;
   transform: scale(1.1);
-  border: solid 1px  #8227c7;
+  border: solid 1px #ff0a54;
 }
 
+/* card - titulo */
 .card-services .card-title {
-  color: #aa21d7;
+  color: #ff0a54;
   font-weight: bold;
   font-size: 25px;
   margin-top: 0.3em;
 }
-
+/* card textos */
 .text-service-card {
   margin-top: 1em;
   font-size: 1.1em;
 }
-
+/* 5° container geral projetos  */
 .container05 {
   max-width: 100%;
   overflow: hidden;
-  height: 100vh;
-  background-color: #000;
+  height: 95vh;
+  background-color: #11001c;
 }
 
+/* sub-container */
 .container5 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 3em;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-around;
+  justify-content: end;
+  align-items: center;
+  justify-items: center;
 }
 
-.title-container-project {
-  font-size: 2.5em;
-  color: #993ae1;
-  padding-top: 2.5em;
-  font-weight: bold;
-}
-
+/* card 2 - projetos */
 .card-2 {
-  background-color: #221f29;
-  border: transparent solid 1px;
+  background-color: #190028;
   width: 20vw;
-  height: 22vh;
+  height: 25vh;
   margin-top: 4em;
   margin-right: 5em;
   border-radius: 0.5em;
   transition: 0.5s ease-in-out;
+  border-radius: 10px;
+  border: transparent solid 1px;
 }
 
-.card-2:hover{
-   background-color: #8227c7;;
-   rotate: 10deg;
+/* card projetos hover */
+
+.card-2:hover {
+  border: solid 1px #8227c7;
 }
+/* title card */
 .card-2 h3 {
-  color: #ffffff;
-  border-bottom: solid 1px #aa21d759;
+  color: #d7c8f3;
   padding: 10px;
+  font-size: 1.5em;
 }
 
+/* texto card */
 .card-2 p {
-  color: #fff;
+  color: #bdbdbd;
   font-size: 19px;
   font-family: "Montserrat", sans-serif;
   margin-left: 1em;
   margin-top: 1em;
 }
 
+/* btn card projeto */
 .card-2 button a {
   color: #fff;
   text-decoration: none;
@@ -319,51 +464,98 @@ body {
   font-size: 17px;
   transition: 0.5s ease-in-out;
 }
+.pyramid-loader {
+  position: relative;
+  width: 30vw;
+  height: 30vh;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.piramide-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(#f72585 10%, #45147e 70%, #b429f9 120%);
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.piramide-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: conic-gradient(#f72585, #b429f9, #d8cce6, #45147e);
+}
+
+.piramide-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: conic-gradient(#f72585, #b429f9, #d8cce6, #45147e);
+}
+
+.piramide-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: conic-gradient(#f72585, #b429f9, #d8cce6, #45147e);
+}
+
+.piramide-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: conic-gradient(#f72585, #b429f9, #d8cce6, #45147e);
+}
+
+.piramide-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: #470b59;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+}
+/* btn card btn hover */
 .card-2 button a:hover {
   background-color: transparent;
   border-bottom: 1px solid #8227c7;
 }
 
+/* 6°container - direitos and email */
 .container06 {
   max-width: 100%;
   overflow: hidden;
-  height: 24vh;
-  background-color: #080609;
- 
+  height: 6vh;
+  background-color: #0d0312;
 }
-
-.contact .email {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  justify-content: end;
-  font-family: sans-serif;
-  font-size: 17px;
-  letter-spacing: 1px;
-}
-
-.contact .local {
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: end;
-  margin-top: 1em;
-}
-
 .contact .direitos {
   color: #fff;
   font-size: 18px;
   font-family: sans-serif;
-}
-.contact .direitos:hover {
-  color: #8824bb;
-  transition: all 0.4s ease-in-out;
+  padding: 1em;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000;
+  background-color: #11001c;
 }
 
 ::-webkit-scrollbar {
@@ -372,1102 +564,497 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c72752;
+  background: #cb5df1;
   border-radius: 2px;
 }
-
-.card-skill{
-  background-color: #000;
-  height: 20vh;
-  color: #fff;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-
-}
-.card-skill:hover, .card-skill:focus, .card-skill:active{
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-8px);
-
-  
-}
-.card-skill img{
-  height: 8vh;
-  width: 5vw;
-  display: flex;
-  border-radius: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-}
-
-.container-card-skill{
-  display: flex;
-  justify-content: center;
-  margin-top: 12em;
-  gap: 12em;
-
-}
-
-.citação{
-  color: #fff;
-  font-size: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 7em;
-}
-.text-skill{
-  font-size: 1.5em;
-  margin-top: 1em;
-}
-#card-hidden{
-  display: none;
-  color: #fff;
-  font-size: 1.2em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.backtotop{
-  position: fixed;
-  left: 95%;
-  top: 90%;
-}
-
-.backtotop img{
-  width: 3vw;
-  height: 3vw;
-}
-
-
-
-@media (min-width: 1501px) and (max-width: 1980px) {
-  .container-header .logo-header {
-    font-size: 35px;
-  }
-  .navbar-nav .nav-item {
-    font-size: 4px;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-    margin-right: 10em;
-  }
-  .container02 {
-    max-width: 100%;
-    height: 102vh;
-  }
-  .text-about {
-    font-size: 2em;
-    margin-left: 2.4em;
-    margin-top: 3em;
-  }
-  .subtext-about {
-    font-size: 1.3em;
-    width: 48vw;
-    margin-left: 4.8em;
-    margin-top: 2em;
-    line-height: 2.2em;
-  }
-  .title-sobre {
-    /* margin-top: -1em; */
-    font-size: 3.5em;
-    margin-left: -1em;
-  }
-  .container03 {
-    height: 120vh;
-  }
-  .title-skills {
-    font-size: 3.5em;
-    font-weight: bold;
-    margin-top: -1em;
-    /* margin-left: -5em; */
-  }
-  #accordionExample {
-    width: 55vw;
-    height: 35vh;
-    font-size: 1em;
-    margin-left: 28em;
-  }
-  .container04 {
-    height: 90vh;
-  }
-  .card-services .card {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 31%;
-  }
-  .text-services {
-    font-size: 3.5em;
-    /* margin-top: 1em; */
-    margin-left: -1em
-  }
-  .card-services {
-    display: flex;
-    margin-right: auto;
-    justify-content: center;
-  }
-  .card-services .card-title {
-    font-size: 1.5em;
-  }
-  .card-services .text-service-card {
-    font-size: 1em;
-    letter-spacing: 1px;
-    margin-top: 0.1em;
-}
-
-  .subtitle {
-    font-size: 20px;
-  }
-  .container05 {
-    height: 80vh;
-  }
-  .container5 {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-
-    width: 70vw;
-    /* height: 40vh; */
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: row;
-}
-
-  .card-2 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title-container-project {
-    font-size: 2.5em;
-  }
-  .card-2 .title-project {
-    font-size: 28px;
-  }
-  .card-2 .text-project {
-    font-size: 18px;
-  }
-
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-    font-size: 45px;
-    width: 37vw;
-    margin-top: -1em;
-  }
-  .section-container {
-    margin-top: -3em;
-    margin-left: 5em;
-  }
-  .container01 {
-    height: 85vh;
-    padding: 24em;
-}
-
-.social-media .direitos {
-  font-size: 17px;
-  display: flex;
-  justify-items: start;
-}
-.btn {
-  margin-left: 1em;
-  padding: 5px;
-  margin-top: 2em;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-  font-size: 6em;
-}
-/* 
-.navbar-expand-lg{
-  padding: 2em;
-} */
-
-.container-header{
-  height: 8vh;
-}
-
-.accordion-button{
-  font-size: 39px;
-  color: #040404;
-}
-
-.card-skill img {
-  height: 10vh;
-  width: 6vw;
-}
-
-.text-skill{
-  font-size: 1.8rem;
-  margin-top: 0.3em;
-}
-
-.citação{
-  font-size: 2em;
-  margin-top: 6em;
-}
-.backtotop {
-  position: fixed;
-  left: 86%;
-  top: 90%;
-}
-.container02 img {
-  position: absolute;
-  top: 89%;
-  left: 53%;
-  width: 42%;
-}
-.container-card-skill{
-  gap: 7em;
-}
-}
-@media (min-width: 1201px) and (max-width: 1500px) {
-  .container-header .logo-header {
-    font-size: 35px;
-  }
-  .navbar-nav .nav-item {
-    font-size: 4px;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-    margin-right: 10em;
-  }
-  .container02 {
-    max-width: 100%;
-    height: 102vh;
-  }
-  .text-about {
-    font-size: 1.5em;
-    margin-left: 2.4em;
-    margin-top: 3em;
-  }
-  .subtext-about {
-    font-size: 1.1em;
-    width: 47vw;
-    margin-left: 3em;
-    margin-top: 2em;
-    line-height: 2.2em;
-  }
-  .title-sobre {
-    /* margin-top: -1em; */
-    font-size: 2.5em;
-    margin-left: -1em;
-  }
-  .container03 {
-    height: 120vh;
-  }
-  .title-skills {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-top: -1em;
-    /* margin-left: -5em; */
-  }
-  
-  .container04 {
-    min-height: 93vh;
-  }
-  .card-services .card {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 31%;
-    height: 34vh;
-  }
-  .text-services {
-    font-size: 2.5em;
-    /* margin-top: 1em; */
-    margin-left: -1em
-  }
-  .card-services {
-    display: flex;
-    margin-right: auto;
-    justify-content: center;
-    margin-top: -8em;
-  }
-  .card-services .card-title {
-    font-size: 1.2em;
-  }
-  .card-services .text-service-card {
-    font-size: 0.99em;
-
-    margin-top: 0.1em;
-}
-
-  .subtitle {
-    font-size: 20px;
-  }
-  .container05 {
-    height: 80vh;
-  }
-  .container5 {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-
-    width: 70vw;
-    /* height: 40vh; */
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: row;
-}
-
-  .card-2 {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 22vw;
-    height: 32vh;
-  }
-  .title-container-project {
-    font-size: 2.5em;
-  }
-  .card-2 .title-project {
-    font-size: 1.4em;
-  }
-  .card-2 .text-project {
-    font-size: 18px;
-  }
-
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-  
-      font-size: 1.2em;
-      margin-left: -10em;
-      width: -7vw;
-      margin-top: -1em;
-  }
-  
-  .section-container {
-    margin-top: -3em;
-    margin-left: 5em;
-  }
-  .container01 {
-    height: 85vh;
-    padding: 24em;
-}
-
-.social-media .direitos {
-  font-size: 17px;
-  display: flex;
-  justify-items: start;
-}
-.btn {
-  margin-left: 1em;
-  padding: 5px;
-  margin-top: 2em;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-  font-size: 5em;
-}
-/* 
-.navbar-expand-lg{
-  padding: 2em;
-} */
-
-.container-header{
-  height: 12vh;
-}
-
-.accordion-button{
-  font-size: 39px;
-  color: #040404;
-}
-
-.card-skill img {
-  height: 10vh;
-  width: 6vw;
-}
-
-.text-skill{
-  font-size: 1.8rem;
-  margin-top: 0.3em;
-}
-
-.citação{
-  font-size: 2em;
-  margin-top: 6em;
-}
-.backtotop {
-  position: fixed;
-  left: 86%;
-  top: 90%;
-}
-.container02 img {
-  position: absolute;
-  top: 142%;
-  left: 58%;
-  width: 42%;
-
-}
-.container-card-skill{
-  gap: 7em;
-  margin-top: 7em;
-}
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .container-header .logo-header {
-    font-size: 1.9em;
-  }
-  .logo-header img {
-    width: 4vw;
-}
-  .container02 {
-    height: 79vh;
-  }
-  .title-container-project {
-    font-size: 2.3em;
-    margin-top: 2em;
-}
-  
-  .text-about {
-    font-size: 1.8em;
-    margin-left: 1em;
-    margin-top: 1em;
-    width: 59vw;
-  }
-  .subtext-about {
-    font-size: 1.3em;
-    width: 55vw;
-    margin-left: 1em;
-    margin-top: 1em;
-  }
-  .title-sobre {
-    margin-top: 1em;
-    font-size: 2.2em;
-  }
-  .container03 {
-    height: 94vh;
-  }
-  .title-skills {
-    font-size: 2.2em;
-    padding-top: 5em;
-  }
-  .container04 {
-    height: 92vh;
-  }
-  .card-services .card {
-    height: 29vh;
-    min-width: 27vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .text-services {
-    font-size: 2.3em;
-    margin-top: 2em;
-  }
-  .card-services {
-    display: flex;
-    justify-content: space-around;
-    gap: 3em;
-    padding-top: 1em;
-    margin-top: 1em;
-  }
-  .card {
-    margin-top: 2em;
-  }
-  .card-services .card-title {
-    font-size: 18px;
-    margin-top: 1em;
-  }
-  .card-services .text-service-card {
-    font-size: 1em;
-  }
-  .container05 {
-    height: 180vh;
-  }
-  .container5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 3em;
-    gap: 10px;
-  }
-  .card-2 {
-    width: 27vw;
-    height: 27vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card-2 .title-project {
-    font-size: 22px;
-  }
-  .card-2 .text-project {
-    font-size: 18px;
-  }
-
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-    font-size: 1.7em;
-    width: 80vw;
-    text-align: center;
-    margin-top: 10em;
-    margin-left: auto;
-
-  }
-  .section-container {
-    margin-top: 10em;
-  }
-  .container01 {
-    height: 92vh;
-  }
-  .social-media .direitos {
-    font-size: 15px;
-  }
-  .backtotop {
-    position: fixed;
-    left: 87%;
-    top: 90%;
-}
-.container-card-skill{
-  gap: 4em;
-}
-
-.container05 {
-  height: 74vh;
-}
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container-header .logo-header {
-    font-size: 1.8em;
-  }
-  .logo-header img {
-    width: 7vw;
-}
-  .container02 {
-    max-width: 100%;
-    height: 99vh;
-  }
-  .text-about {
-    font-size: 25px;
-    margin-left: 1em;
-    margin-top: 2em;
-  }
-  .subtext-about {
-    font-size: 1.5em;
-    width: 90vw;
-    margin-left: 1em;
-    margin-top: 2em;
-  }
-  .title-sobre {
-    margin-top: 1em;
-    font-size: 2.3em;
-  }
-  .container03 {
-    height: 70vh;
-  }
-  .title-skills {
-    font-size: 2.2em;
-    margin-top: -1em;
-    padding-top: 7em;
-  }
-
-  .container04 {
-    height: 165vh;
-  }
-  .card-services .card {
-    height: auto;
-    width: 68vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .text-services {
-    font-size: 2.3em;
-    /* margin-top: 16em; */
-    padding-top: 7.1em;
-  }
-  .card-services {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card {
-    margin-top: 1em;
-  }
-  .card-services .card-title {
-    font-size: 25px;
-    margin-top: 1em;
-  }
-  .card-services .text-service-card {
-    font-size: 22px;
-  }
-  .container05 {
-    height: 100vh;
-  }
-  .container5 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card-2 {
-    width: 63vw;
-    height: 20vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title-container-project {
-    font-size: 2.5em;
-  }
-  .card-2 .title-project {
-    font-size: 25px;
-  }
-  .card-2 .text-project {
-    font-size: 18px;
-  }
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-    font-size: 1.3em;
-    width: 80vw;
-    margin-left: -1em;
-    text-align: center;
-    margin-top: -5em;
-  }
-  .section-container {
-    margin-top: 11em;
-  }
-  .container01 {
-    height: 86vh;
-  }
-  .social-media .direitos {
-    font-size: 17px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .btn {
-    margin-left: 1em;
-    padding: 5px;
-    margin-top: 2em;
-  }
-  .container-card-skill{
-    display:flex;
-    margin-top: 7em;
-    gap: 2em;
-  }
-  .card-skill img{
-    height: auto;
-    width: 8vw;
-    margin-top: 2em;
-  }
-  .container02 img {
-    position: absolute;
-    top: 130%;
-    left: 18%;
-    width: 61%;
-}
-.card-services{
-  margin-top: -10em;
-}
-.backtotop img{
-  width: 6vw;
-  height: 6vw;
-}
-.backtotop {
-  position: fixed;
-  left: 90%;
-  top: 90%;
-}
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .container-header .logo-header {
-    font-size: 1.8em;
-    margin-left: 0.1em;
-  }
-  .logo-header img{
-    width: 7vw;
-  }
-  .container02 {
-    max-width: 100%;
-    height: 99vh;
-  }
-
-.nav-item, .nav-link{
-  font-size: 1.2em;
-}
-  .text-about {
-    font-size: 1.5em;
-    margin-left: 1em;
-    margin-top: 2em;
-  }
-  .subtext-about {
-    font-size: 1.4em;
-    width: 90vw;
-    margin-left: 1em;
-    margin-top: 2em;
-  }
-  .title-sobre {
-    margin-top: 1em;
-    font-size: 2.5em;
-  }
-  .container03 {
-    height: 110vh;
-  }
-  .title-skills {
-    font-size: 2.3em;
-    padding-top: 5em;
-  }
-  .container04 {
-    height: 139vh;
-  }
-  .card-services .card {
-    height: 30vh;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .text-services {
-    font-size: 2.4em;
-    margin-top: 2em;
-  }
-  .card-services {
-    display: block;
-    padding-top: 1em;
-  }
-  .card-skill{
-    height: 13vh;
-  }
-  .card {
-    margin-top: 1em;
-  }
-  .card-services .card-title {
-    font-size: 1.8em;
-    margin-top: 1em;
-  }
-  .card-services .text-service-card {
-    font-size: 1.2em;
-  }
-  .container05 {
-    height: 116vh;
-  }
-  .container5 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card-2 {
-    width: 75vw;
-    height: 26vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title-container-project {
-    font-size: 2.5em;
-  }
-  .card-2 .title-project {
-    font-size: 1.5em;
-  }
-  .card-2 .text-project {
-    font-size: 1.3em;
-  }
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-    font-size: 1.3em;
-    width: auto;
-    text-align: center;
-    margin-top: -5em;
-  }
-  .section-container {
-    margin-top: 7em;
-  }
-  .container01 {
-    height: 77vh;
-  }
-  .social-media .direitos {
-    font-size: 17px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .btn {
-    margin-left: 1em;
-    padding: 5px;
-    margin-top: 2em;
-  }
-  .container-card-skill{
-    display: block;
-  }
-
-  .contact-me .social2{
-    width: 7%;
-    position: absolute;
-    top: 121.3em;
-    left: 2em;
-  }
-  
-
-  .contact-me .social3{
-    width: 9%;
-    position: absolute;
-    top: 120.6em;
-    left: 9em;
-}
-  
-  .contact-me .social4{
-    width: 9%;
-    position: absolute;
-    top: 120.5em;
-    left: 23em;
-  }
-  
-  .contact-me .social5{
-    width: 9%;
-    position: absolute;
-    top: 120.5em;
-    left: 16em;
-  }
-  .backtotop {
-    position: fixed;
-    left: 77%;
-    top: 92%;
-}
-  .backtotop img {
-    width: 9vw;
-    height: 9vw;
-}
-.container02 img {
-  position: absolute;
-  top: 134%;
-  left: -2%;
-  width: 89%;
-}
-
-.card-skill img{
-  width: auto;
-}
-.container-card-skill{
-  margin-top: 4em;
-}
-.citação{
-  font-size: 1em;
-}
-.contact .direitos{
-  font-size: 0.9em;
-}
-.contact .direitos {
-  font-size: 1em;
-  margin-top: 2em;
-}
+/* scroll reveal */
+.section-container,
+.texts,
+.card1,
+.card-services,
+.card-2,
+.img-note {
+  visibility: hidden;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .container-header .logo-header {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
     font-size: 1.8em;
     margin-left: 0.1em;
   }
-  .logo-header img{
+
+  .logo-header img {
     width: 10vw;
   }
-  .container02 {
-    max-width: 100%;
-    height: 112vh;
-  }
 
-.nav-item, .nav-link{
-  font-size: 1em;
-}
-  .text-about {
-    font-size: 1.5em;
-    margin-left: 1em;
-    margin-top: 2em;
-  }
-  .subtext-about {
-    font-size: 1em;
-    width: 90vw;
-    margin-left: 1.4em;
-    margin-top: 1em;
-  }
-  .title-sobre {
-    margin-top: 10em;
-    font-size: 30px;
-  }
-  .container03 {
-    height: 110vh;
-  }
-  .title-skills {
-    font-size: 27px;
-    padding-top: 6em;
-  }
-  .container04 {
-    height: 139vh;
-  }
-  .card-services .card {
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .text-services {
-    font-size: 32px;
-    margin-top: 2em;
-  }
-  .card-services {
-    display: block;
-    padding-top: 1em;
-  }
-  .card-skill{
-    height: 13vh;
-  }
-  .card {
-    margin-top: 1em;
-  }
-  .card-services .card-title {
-    font-size: 1.1em;
-    margin-top: 0.1em;
-  }
-  .card-services .text-service-card {
-    font-size: 0.9em;
-  }
-  .container05 {
-    height: 116vh;
-  }
-  .container5 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .card-2 {
-    width: 75vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title-container-project {
-    font-size: 28px;
-    padding-top: 2.9em;
-  }
-  .card-2 .title-project {
+  .section-container,
+  .title-job {
     font-size: 1.3em;
   }
-  .card-2 .text-project {
-    font-size: 0.9em;
-  }
-  .email {
-    margin-left: 13em;
-  }
-  .local {
-    font-size: 10px;
-    margin-left: -1em;
-  }
-  .section-container .title-job {
-    font-size: 1em;
-    width: auto;
-    text-align: center;
-    margin-top: -5em;
-  }
-  .section-container {
-    margin-top: 7em;
-  }
+
   .container01 {
-    height: 51vh;
+    height: 85vh;
   }
-  .social-media .direitos {
-    font-size: 17px;
+  .text-about {
+    font-size: 1.3em;
+    margin-top: -7em;
+    margin-left: 2em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: -1em;
+  }
+  .subtext-about {
+    font-size: 1.3em;
+    width: 15em;
     margin-left: auto;
     margin-right: auto;
   }
-  .btn {
-    margin-left: 1em;
-    padding: 5px;
-    margin-top: 2em;
+  .social-buttons {
+    margin-left: 0.9em;
   }
-  .container-card-skill{
+  .card1 {
+    width: 100%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+
+  .card-services {
+    padding-top: 3em;
     display: block;
   }
-
-  .contact-me .social2{
-    width: 11%;
-    position: absolute;
-    top: 88em;
-    left: 2em;
+  .card2 {
+    margin-top: 1.2em;
   }
-  
-
-  .contact-me .social3{
-    width: 11%;
-    position: absolute;
-    top: 88em;
-    left: 6em;
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 210vh;
+  }
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  
-
-  .contact-me .social4{
-    width: 11%;
-    position: absolute;
-    top: 88em;
-    left: 14em;
+  .contact .direitos {
+    font-size: 13px;
   }
-  
-  .contact-me .social5{
-    width: 11%;
-    position: absolute;
-    top: 88em;
-    left: 10em;
+
+  .container-header {
+    max-width: 100%;
   }
-  .backtotop {
-    position: fixed;
-    left: 77%;
-    top: 92%;
-}
-  .backtotop img {
-    width: 13vw;
-    height: 13vw;
-}
-.container02 img {
-  position: absolute;
-  top: 152%;
-  left: 7%;
-  width: 83%;
 }
 
-.card-skill img{
-  width: 16vw;
-}
-.container-card-skill{
-  margin-top: 4em;
-}
-.citação{
-  font-size: 1em;
-}
-.contact .direitos{
-  font-size: 0.9em;
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
+    font-size: 1.8em;
+    margin-left: 0.1em;
+  }
+
+  .logo-header img {
+    width: 10vw;
+  }
+
+  .section-container,
+  .title-job {
+    font-size: 1.3em;
+  }
+
+  .container01 {
+    height: 85vh;
+  }
+  .text-about {
+    font-size: 1.3em;
+    margin-top: -7em;
+    margin-left: 2em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: -1em;
+  }
+  .subtext-about {
+    font-size: 1.4em;
+    width: 17em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons {
+    margin-left: 0.9em;
+  }
+  .card1 {
+    width: 100%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+
+  .card-services {
+    padding-top: 3em;
+    display: block;
+  }
+  .card2 {
+    margin-top: 1.2em;
+  }
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 210vh;
+  }
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact .direitos {
+    font-size: 13px;
+  }
+
+  .container-header {
+    max-width: 100%;
+  }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
+    font-size: 1.8em;
+    margin-left: 0.1em;
+  }
+
+  .logo-header img {
+    width: 5vw;
+  }
+
+  .nav-item,
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .section-container,
+  .title-job {
+    font-size: 1.6em;
+  }
+
+  .container01 {
+    height: 85vh;
+  }
+  .container02 {
+    padding-top: 16em;
+  }
+  .text-about {
+    font-size: 1.9em;
+    margin-top: -7em;
+    margin-left: 2em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: -1em;
+  }
+  .subtext-about {
+    font-size: 1.5em;
+    width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons {
+    margin-left: 2em;
+  }
+  .card1 {
+    width: 83%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+
+  .card-services {
+    padding-top: 3em;
+    display: block;
+  }
+  .card2 {
+    margin-top: 1.2em;
+    margin-left: auto;
+    width: 66%;
+    margin-right: auto;
+  }
+
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 210vh;
+  }
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-2 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact .direitos {
+    font-size: 13px;
+  }
+
+  .container-header {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
+    font-size: 1.8em;
+    margin-left: 0.1em;
+  }
+
+  .logo-header img {
+    width: 4vw;
+  }
+
+  .nav-item,
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .section-container,
+  .title-job {
+    font-size: 1.3em;
+  }
+
+  .container01 {
+    height: 85vh;
+  }
+  .text-about {
+    font-size: 1.8em;
+    margin-top: -7em;
+    margin-left: 2em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: -1em;
+  }
+  .subtext-about {
+    font-size: 1.8em;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons {
+    margin-left: 3em;
+  }
+  .card1 {
+    width: 80%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+
+  .card-services {
+    padding-top: 3em;
+    display: block;
+  }
+  .card2 {
+    margin-top: 1.2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 95vh;
+  }
+  .container5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-around;
+    justify-content: end;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1em;
+  }
+  .card-2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact .direitos {
+    font-size: 13px;
+  }
+
+  .container-header {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
+    font-size: 1.8em;
+    margin-left: 0.1em;
+  }
+
+  .logo-header img {
+    width: 3vw;
+  }
+
+  .section-container,
+  .title-job {
+    font-size: 1.7em;
+  }
+
+  .container01 {
+    height: 96vh;
+  }
+  .text-about {
+    font-size: 1.9em;
+    margin-top: -6em;
+    margin-left: 3.5em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: 12em;
+  }
+  .subtext-about {
+    font-size: 1.7em;
+    width: 41em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons {
+    margin-left: 4.5em;
+  }
+  .card1 {
+    width: 50%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+  .container04 {
+    height: 98vh;
+  }
+  .card-services {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 11em;
+    margin-top: 1.3em;
+  }
+  .card2 {
+    margin-top: 1.2em;
+    width: 100%;
+    height: 30vh;
+  }
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 105vh;
+  }
+  .container5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-around;
+    justify-content: end;
+    align-items: center;
+    justify-items: center;
+    padding-top: 1em;
+  }
+  .card-2 {
+    width: 80%;
+    height: 34vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container06 {
+    height: 8vh;
+  }
+
+  .contact .direitos {
+    font-size: 1.2em;
+  }
+
+  .container-header {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1980px) {
+  .container5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-around;
+    justify-content: end;
+    align-items: center;
+    justify-items: center;
+    padding-top: 10em;
+    margin-left: 9em;
+  }
 }
