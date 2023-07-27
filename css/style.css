@@ -1078,7 +1078,7 @@ mark {
   }
 }
 
-@media (min-width: 1501px) and (max-width: 2000px) {
+@media (min-width: 1501px) and (max-width: 1990px) {
   .container5 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
