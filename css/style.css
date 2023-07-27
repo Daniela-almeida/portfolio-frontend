@@ -1,10 +1,17 @@
 /* geral */
 * {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* scroll */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 /* links */
 a {
@@ -13,10 +20,6 @@ a {
 }
 a:hover {
   color: #fff;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 /* texto destacado */
@@ -30,7 +33,6 @@ mark {
   position: fixed;
   z-index: 3;
   max-width: 100%;
-  overflow: hidden;
   transition: all 0.3s ease-in-out, background-color 0.3s;
   background-color: #11001c;
 }
@@ -154,7 +156,7 @@ mark {
 }
 
 /* imagem 2° container */
-.container02 img {
+.container02 .img-note {
   position: absolute;
   top: 100%;
   left: 60%;
@@ -578,13 +580,10 @@ mark {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .logo-header {
-    font-size: 1.8em;
-    margin-left: 0.1em;
+    font-size: 1.2em;
+    /* margin-right: -33em; */
+    margin-left: -0.9em;
   }
 
   .logo-header img {
@@ -600,9 +599,9 @@ mark {
     height: 85vh;
   }
   .text-about {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-top: -7em;
-    margin-left: 2em;
+    margin-left: 0.2em;
   }
 
   .container02 img {
@@ -613,100 +612,14 @@ mark {
     padding-top: -1em;
   }
   .subtext-about {
-    font-size: 1.3em;
-    width: 15em;
+    font-size: 1.1em;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
   }
   .social-buttons {
-    margin-left: 0.9em;
-  }
-  .card1 {
-    width: 100%;
-  }
-  .skill-level {
-    margin-left: 4em;
-    width: 25vw;
-  }
-
-  .card-services {
-    padding-top: 3em;
-    display: block;
-  }
-  .card2 {
-    margin-top: 1.2em;
-  }
-  .card-services .card-title {
-    font-size: 1.4em;
-  }
-  .container05 {
-    height: 210vh;
-  }
-  .container5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .card-2 {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .contact .direitos {
-    font-size: 13px;
-  }
-
-  .container-header {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .logo-header {
-    font-size: 1.8em;
-    margin-left: 0.1em;
-  }
-
-  .logo-header img {
-    width: 10vw;
-  }
-
-  .section-container,
-  .title-job {
-    font-size: 1.3em;
-  }
-
-  .container01 {
-    height: 85vh;
-  }
-  .text-about {
-    font-size: 1.3em;
-    margin-top: -7em;
-    margin-left: 2em;
-  }
-
-  .container02 img {
-    display: none;
-  }
-
-  .texts {
-    padding-top: -1em;
-  }
-  .subtext-about {
-    font-size: 1.4em;
-    width: 17em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .social-buttons {
-    margin-left: 0.9em;
+    margin-left: -0.9em;
+    padding: 1px;
   }
   .card1 {
     width: 100%;
@@ -745,9 +658,123 @@ mark {
   .contact .direitos {
     font-size: 13px;
   }
+  .container04 {
+    min-height: 100vh;
+  }
+
+  .text-service-card {
+    margin-top: 1em;
+    font-size: 1em;
+    letter-spacing: 0.1px;
+  }
+  .card-2 h3 {
+    font-size: 1.2em;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .container-header {
+    max-width: 96%;
+  }
+  .btn-mobile {
+    height: 4.5vh;
+  }
+  .nav-item .nav-link:before {
+    position: absolute;
+    right: 25em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo-header {
+    font-size: 1.5em;
+    margin-left: 0.1em;
+  }
+
+  .logo-header img {
+    width: 4vw;
+  }
+
+  .section-container,
+  .title-job {
+    font-size: 1.3em;
+  }
+
+  .container01 {
+    height: 85vh;
+  }
+  .text-about {
+    font-size: 1.3em;
+    margin-top: -7em;
+    margin-left: -0.1em;
+  }
+
+  .container02 img {
+    display: none;
+  }
+
+  .texts {
+    padding-top: -1em;
+  }
+  .subtext-about {
+    font-size: 1.3em;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-buttons {
+    margin-left: 0.9em;
+  }
+  .card1 {
+    width: 90%;
+  }
+  .skill-level {
+    margin-left: 4em;
+    width: 25vw;
+  }
+
+  .card-services {
+    padding-top: 3em;
+    display: block;
+  }
+  .card2 {
+    margin-top: 1.2em;
+  }
+  .card-services .card-title {
+    font-size: 1.4em;
+  }
+  .container05 {
+    height: 210vh;
+  }
+  .container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-2 {
+    width: 56%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact .direitos {
+    font-size: 13px;
+  }
 
   .container-header {
     max-width: 100%;
+  }
+
+  .nav-item .nav-link:before {
+    position: absolute;
+    right: 25em;
   }
 }
 
@@ -767,7 +794,7 @@ mark {
 
   .nav-item,
   .nav-link {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .section-container,
@@ -784,7 +811,7 @@ mark {
   .text-about {
     font-size: 1.9em;
     margin-top: -7em;
-    margin-left: 2em;
+    margin-left: -0.1em;
   }
 
   .container02 img {
@@ -796,7 +823,7 @@ mark {
   }
   .subtext-about {
     font-size: 1.5em;
-    width: 35em;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
   }
@@ -836,7 +863,7 @@ mark {
     margin: 0 auto;
   }
   .card-2 {
-    width: 60%;
+    width: 47%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -847,6 +874,9 @@ mark {
 
   .container-header {
     max-width: 100%;
+  }
+  .img-note {
+    display: block;
   }
 }
 
@@ -880,7 +910,7 @@ mark {
   .text-about {
     font-size: 1.8em;
     margin-top: -7em;
-    margin-left: 2em;
+    margin-left: -0.1em;
   }
 
   .container02 img {
@@ -892,7 +922,7 @@ mark {
   }
   .subtext-about {
     font-size: 1.8em;
-    width: 30em;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
   }
@@ -900,7 +930,7 @@ mark {
     margin-left: 3em;
   }
   .card1 {
-    width: 80%;
+    width: 67%;
   }
   .skill-level {
     margin-left: 4em;
@@ -945,13 +975,13 @@ mark {
   .container-header {
     max-width: 100%;
   }
+  .img-note {
+    display: block;
+    visibility: visible;
+  }
 }
 
 @media (min-width: 1201px) and (max-width: 1500px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .logo-header {
     font-size: 1.8em;
     margin-left: 0.1em;
@@ -963,7 +993,7 @@ mark {
 
   .section-container,
   .title-job {
-    font-size: 1.7em;
+    font-size: 1.9em;
   }
 
   .container01 {
@@ -972,11 +1002,13 @@ mark {
   .text-about {
     font-size: 1.9em;
     margin-top: -6em;
-    margin-left: 3.5em;
+    margin-left: 0.9em;
+    width: 42vw;
   }
 
-  .container02 img {
-    display: none;
+  .img-note {
+    display: block;
+    margin: 9em 0 0 0;
   }
 
   .texts {
@@ -984,15 +1016,15 @@ mark {
   }
   .subtext-about {
     font-size: 1.7em;
-    width: 41em;
-    margin-left: auto;
-    margin-right: auto;
+    width: 24em;
+    margin-left: 1em;
+    /* margin-right: auto; */
   }
   .social-buttons {
-    margin-left: 4.5em;
+    margin-left: 0.5em;
   }
   .card1 {
-    width: 50%;
+    width: 63%;
   }
   .skill-level {
     margin-left: 4em;
@@ -1046,7 +1078,7 @@ mark {
   }
 }
 
-@media (min-width: 1501px) and (max-width: 1980px) {
+@media (min-width: 1501px) and (max-width: 2000px) {
   .container5 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
