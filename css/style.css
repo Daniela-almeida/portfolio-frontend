@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+section {
   overflow-x: hidden;
 }
 /* links */
@@ -32,7 +32,7 @@ mark {
 .container-header {
   position: fixed;
   z-index: 3;
-  max-width: 100%;
+  width: 100%;
   transition: all 0.3s ease-in-out, background-color 0.3s;
   background-color: #11001c;
 }
@@ -673,12 +673,12 @@ mark {
   .nav-link {
     font-size: 1.1rem;
   }
-
+  /* 
   .container-header {
-    max-width: 96%;
-  }
+    max-width: 9%;
+  } */
   .btn-mobile {
-    height: 4.5vh;
+    height: 4.9vh;
   }
   .nav-item .nav-link:before {
     position: absolute;
@@ -767,10 +767,10 @@ mark {
   .contact .direitos {
     font-size: 13px;
   }
-
+  /* 
   .container-header {
     max-width: 100%;
-  }
+  } */
 
   .nav-item .nav-link:before {
     position: absolute;
@@ -779,10 +779,6 @@ mark {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .logo-header {
     font-size: 1.8em;
     margin-left: 0.1em;
@@ -871,20 +867,16 @@ mark {
   .contact .direitos {
     font-size: 13px;
   }
-
+  /* 
   .container-header {
     max-width: 100%;
-  }
+  } */
   .img-note {
     display: block;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .logo-header {
     font-size: 1.8em;
     margin-left: 0.1em;
@@ -972,9 +964,9 @@ mark {
     font-size: 13px;
   }
 
-  .container-header {
+  /* .container-header {
     max-width: 100%;
-  }
+  } */
   .img-note {
     display: block;
     visibility: visible;
@@ -1072,9 +1064,13 @@ mark {
   .contact .direitos {
     font-size: 1.2em;
   }
-
+  /* 
   .container-header {
     max-width: 100%;
+  } */
+
+  .container02 {
+    height: 100vh;
   }
 }
 
