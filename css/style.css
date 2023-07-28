@@ -13,6 +13,10 @@ html {
 section {
   overflow-x: hidden;
 }
+
+body {
+  overflow-x: hidden;
+}
 /* links */
 a {
   text-decoration: none;
@@ -34,7 +38,8 @@ mark {
   z-index: 3;
   width: 100%;
   transition: all 0.3s ease-in-out, background-color 0.3s;
-  background-color: #11001c;
+  background-color: hsl(0deg 0% 0% / 14%);
+  backdrop-filter: blur(8px);
 }
 /* logo */
 .logo-header {
@@ -117,7 +122,6 @@ mark {
 /* 1° container - job name */
 .container01 {
   background: #11001c;
-  overflow: hidden;
   height: 95vh;
 }
 
@@ -556,19 +560,6 @@ mark {
   padding: 1em;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #11001c;
-}
-
-::-webkit-scrollbar {
-  width: 14px;
-  background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cb5df1;
-  border-radius: 2px;
-}
 /* scroll reveal */
 .section-container,
 .texts,
@@ -577,6 +568,18 @@ mark {
 .card-2,
 .img-note {
   visibility: hidden;
+}
+::-webkit-scrollbar-track {
+  background-color: #1f0320;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  background: #11001c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #620a5fd7;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -596,7 +599,7 @@ mark {
   }
 
   .container01 {
-    height: 85vh;
+    height: 95vh;
   }
   .text-about {
     font-size: 1.2em;
@@ -706,7 +709,7 @@ mark {
   }
 
   .container01 {
-    height: 85vh;
+    height: 95vh;
   }
   .text-about {
     font-size: 1.3em;
@@ -776,6 +779,10 @@ mark {
     position: absolute;
     right: 25em;
   }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -799,7 +806,7 @@ mark {
   }
 
   .container01 {
-    height: 85vh;
+    height: 95vh;
   }
   .container02 {
     padding-top: 16em;
@@ -935,7 +942,7 @@ mark {
   }
   .card2 {
     margin-top: 1.2em;
-    width: 80%;
+    width: 66%;
     margin-left: auto;
     margin-right: auto;
   }

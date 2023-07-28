@@ -38,8 +38,8 @@ sr.reveal(".card-2", {
 sr.reveal(".img-note", {
   duration: 2000,
   delay: 600,
-  distance: "15em",
-  origin: "right",
+  distance: "10em",
+  origin: "top",
 });
 
 sr.reveal(".social-buttons", {
