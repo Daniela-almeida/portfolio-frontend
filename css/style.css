@@ -582,6 +582,113 @@ mark {
   background: #620a5fd7;
 }
 
+/* modo dark / light */
+
+/* The switch - the box around the slider */
+#switchLabel {
+  font-size: 17px;
+  position: relative;
+  top: -18em;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+#switchLabel input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #e1e1e1;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #000000;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #313131;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+.is-light .container01 {
+  background-color: #f6f5f5;
+}
+
+.is-light .container02 {
+  background-color: #fff;
+}
+
+.is-light .container03 {
+  background-color: #f6f5f5;
+}
+
+.is-light .container04 {
+  background-color: #fff;
+}
+
+.is-light .container05 {
+  background-color: #f6f5f5;
+}
+
+.is-light .container06 {
+  background-color: #fff;
+}
+
+.is-light .container-header {
+  background-color: hsl(310deg 72.14% 11.21%);
+  backdrop-filter: blur(8px);
+}
+
+.is-light mark {
+  color: #000;
+}
+.is-light .text-about {
+  color: #512658;
+}
+.is-light .social-buttons {
+  box-shadow: none;
+}
+
+.is-light .card1 {
+  background-color: #1f062a;
+}
+.is-light .card2 {
+  border: none;
+}
+
+.is-light .card-2 {
+  background-color: #190028;
+}
+.is-light .contact .direitos {
+  color: #000;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .logo-header {
     font-size: 1.2em;
