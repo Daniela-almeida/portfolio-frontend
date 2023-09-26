@@ -1,13 +1,5 @@
 // scroll reveal library
 
-function switchTheme() {
-  document.body.classList.toggle("is-light");
-  document.body.classList.toggle("is-dark");
-}
-
-const themeSwitch = document.getElementById("themeSwitch");
-themeSwitch.addEventListener("change", switchTheme);
-
 window.sr = new ScrollReveal({ reset: true });
 
 sr.reveal(".section-container", {
