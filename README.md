@@ -1,15 +1,14 @@
 # PortfolioDev
 
-
 🛠 Habilidades
 Javascript, HTML, CSS...
 
-Aprendizados
-Consegui melhorar as animações
+🛠 Aprendizados
+Consegui melhorar as animações, melhorar responsividade com breakpoints...
 
 Stack utilizada
-Front-end: html, css, javascript ( scroll reveal)
-
+Front-end: html, css, javascript ( scroll reveal )
 
 ## 🔗 Links
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daniela-almeida-322564203/)
