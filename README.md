@@ -7,7 +7,12 @@ Javascript, HTML, CSS...
 Consegui melhorar as animações, melhorar responsividade com breakpoints...
 
 Stack utilizada
-Front-end: html, css, javascript ( scroll reveal )
+Front-end: html, css (bootstrap), javascript ( scroll reveal )
+
+🛠 Atualizações
+
+- Cores
+- Img adicionada no container sobre
 
 ## 🔗 Links
 

@@ -28,7 +28,7 @@ a:hover {
 
 /* texto destacado */
 mark {
-  color: #fff;
+  color: #ff8fab;
   background: none;
 }
 
@@ -83,7 +83,7 @@ mark {
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: solid 2px #b429f9;
+  border-bottom: solid 2px #fb7e9d;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -115,13 +115,13 @@ mark {
 
 /* mobile btn */
 .btn-mobile {
-  background-color: #aa21d7;
+  background-color: #ff4d6d;
   border: #080609 solid 1px;
 }
 
 /* 1° container - job name */
 .container01 {
-  background: #11001c;
+  background: #000;
   height: 95vh;
 }
 
@@ -141,7 +141,7 @@ mark {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  background-image: linear-gradient(to right, #c72752, #b527cf);
+  background-image: linear-gradient(to right, #c72752, #ff799a);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -155,7 +155,10 @@ mark {
   height: 95vh;
   background-position: 90% 40%;
   background-repeat: no-repeat;
-  background-color: #190028;
+  background-image: url(../img/blac-rose-gold-backgrounf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding-top: 10em;
 }
 
@@ -175,22 +178,16 @@ mark {
   align-items: left;
   padding-top: 7em;
 }
-/* titulo */
-.title-sobre {
-  font-size: 2.8em;
-  font-weight: bold;
-  padding-top: 3em;
-  color: #fff;
-  letter-spacing: 1px;
-}
+
 /* sub-title */
 .text-about {
-  color: #d5c4f6;
+  color: #fff;
   font-size: 2em;
   letter-spacing: 1px;
   display: flex;
   justify-content: start;
   margin-left: 4.4em;
+  z-index: 8;
 }
 
 /* sub-texto */
@@ -199,7 +196,7 @@ mark {
   font-weight: 400;
   width: 40em;
   margin-left: 6em;
-  color: gray;
+  color: #f4f3eed0;
   letter-spacing: 2px;
   margin-top: 1em;
 }
@@ -209,10 +206,9 @@ mark {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 0px 0px 15px #00000027;
-  padding: 15px 10px;
+  padding: 1em;
   border-radius: 5em;
-  margin-left: 8em;
+  margin-left: 7em;
 }
 
 .social-button {
@@ -224,12 +220,11 @@ mark {
   border-radius: 50%;
   margin: 0 10px;
   background-color: #fff;
-  box-shadow: 0px 0px 4px #00000027;
   transition: 0.3s;
 }
 
 .social-button:hover {
-  background-color: #f2f2f2;
+  background-color: #f6c2cf;
   box-shadow: 0px 0px 6px 3px #00000027;
 }
 
@@ -288,7 +283,7 @@ mark {
 .container03 {
   width: 100%;
   height: 100vh;
-  background-color: #11001c;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -298,18 +293,19 @@ mark {
 /* card skill */
 .card1 {
   width: 50vw;
-  background-color: #220135;
-  box-shadow: 10px -1px 67px 3px rgba(125, 34, 125, 0.76);
-  border-radius: 10px;
+  background-color: #050505;
+  box-shadow: 1rem;
+  border-radius: 3px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  border: solid 1px #ff4d6d;
 }
 
 /* header skill card */
 .header {
   background-color: #000000;
-  color: #fff;
+  color: #ffffffda;
   padding: 20px;
   text-align: center;
   font-size: 1.6em;
@@ -318,7 +314,7 @@ mark {
 
 /* body card */
 .card-body1 {
-  padding: 20px;
+  padding: 2em;
 }
 
 /* div das skills */
@@ -336,6 +332,7 @@ mark {
 }
 .skill-name:hover {
   color: #f9626c;
+  cursor: pointer;
 }
 .skill-level {
   width: 15vw;
@@ -363,7 +360,7 @@ mark {
   max-width: 100%;
   overflow: hidden;
   min-height: 95vh;
-  background-color: #190028;
+  background-color: #050505;
 }
 
 /* card-serviços */
@@ -377,11 +374,11 @@ mark {
 
 /* card com cada serviço */
 .card2 {
-  background-color: #11001c;
-  box-shadow: 10px -1px 67px 3px rgba(64, 11, 64, 0.681);
+  background-color: #000;
+
   min-width: 20vw;
   height: 26vh;
-  color: #fff;
+  color: #ffffffb8;
   transition: all 0.6s ease-in-out;
   border: solid 1px transparent;
   border-radius: 8px;
@@ -393,12 +390,12 @@ mark {
   color: #fff;
   cursor: cell;
   transform: scale(1.1);
-  border: solid 1px #ff0a54;
+  border: solid 1px #ff4d6d;
 }
 
 /* card - titulo */
 .card-services .card-title {
-  color: #ff0a54;
+  color: #ff4d6d;
   font-weight: bold;
   font-size: 25px;
   margin-top: 0.3em;
@@ -413,7 +410,7 @@ mark {
   max-width: 100%;
   overflow: hidden;
   height: 95vh;
-  background-color: #11001c;
+  background-color: #000;
 }
 
 /* sub-container */
@@ -428,27 +425,27 @@ mark {
 
 /* card 2 - projetos */
 .card-2 {
-  background-color: #190028;
+  background-color: #050505;
   width: 20vw;
   height: 25vh;
   margin-top: 4em;
   margin-right: 5em;
   border-radius: 0.5em;
   transition: 0.5s ease-in-out;
-  border-radius: 10px;
+  border-radius: 3px;
   border: transparent solid 1px;
 }
 
 /* card projetos hover */
 
 .card-2:hover {
-  border: solid 1px #8227c7;
+  border: solid 1px #ff4d6d;
 }
 /* title card */
 .card-2 h3 {
-  color: #d7c8f3;
+  color: #ff4d6d;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 /* texto card */
@@ -460,16 +457,17 @@ mark {
   margin-top: 1em;
 }
 
-/* btn card projeto */
-.card-2 button a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #00000085;
-  padding: 14px;
-  border-radius: 3px;
-  font-size: 17px;
-  transition: 0.5s ease-in-out;
+.card-2 img {
+  filter: brightness(0.5);
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 }
+
+/* btn card projeto */
+
 .pyramid-loader {
   position: relative;
   width: 30vw;
@@ -496,7 +494,7 @@ mark {
 .piramide-loader .wrapper .side {
   width: 70px;
   height: 70px;
-  background: radial-gradient(#f72585 10%, #45147e 70%, #b429f9 120%);
+  background: radial-gradient(#f72585 10%, #c730a6 70%, #ff4d6d 120%);
   position: absolute;
   top: 5em;
   left: 0;
@@ -540,24 +538,19 @@ mark {
   transform: rotateX(90deg) translateZ(-40px);
   filter: blur(12px);
 }
-/* btn card btn hover */
-.card-2 button a:hover {
-  background-color: transparent;
-  border-bottom: 1px solid #8227c7;
-}
 
 /* 6°container - direitos and email */
 .container06 {
   max-width: 100%;
   overflow: hidden;
-  height: 6vh;
-  background-color: #0d0312;
+  height: 8vh;
+  background-color: #050505;
 }
 .contact .direitos {
   color: #fff;
   font-size: 18px;
   font-family: sans-serif;
-  padding: 1em;
+  padding: 1.3em;
 }
 
 /* scroll reveal */
@@ -570,16 +563,16 @@ mark {
   visibility: hidden;
 }
 ::-webkit-scrollbar-track {
-  background-color: #1f0320;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar {
   width: 14px;
-  background: #11001c;
+  background: #171717;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #620a5fd7;
+  background: #ff4d6d;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
